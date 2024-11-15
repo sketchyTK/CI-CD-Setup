@@ -1,0 +1,32 @@
+name: Checking Tests
+
+# Trigger workflow on all pull requests
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging
+# Jobs to carry out
+jobs:
+  test:
+    # Operating system to run job on
+    runs-on: ubuntu-latest
+    # Steps in job
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Use Node.js 21.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 21.x
+          
+      # Install dependencies
+      - name: :toolbox: Install Deps
+        run: npm install
+
+      - name: Start Application
+        run: npm run start
+
+      - name: Run Cypress Component test
+        run: npm run test-component
