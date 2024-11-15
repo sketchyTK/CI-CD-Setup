@@ -14,9 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test
-        run: |
+        run: 
           npm install
-          npm run test
+          npm run start
+          npm run test-component
 
       - name: Deploy
         # Only run this step if the branch is main
