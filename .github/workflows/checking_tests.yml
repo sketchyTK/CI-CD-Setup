@@ -20,7 +20,7 @@ jobs:
           node-version: 21.x
           
       - name: :toolbox: Install Deps and 
-        run: npm render-build
+        run: npm run render-build
 
       - name: Start Application
         run: npm run start
