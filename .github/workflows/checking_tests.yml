@@ -6,10 +6,9 @@ on:
       - develop
 
 jobs:
-  test:
+  build:
     name: Checking Tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
