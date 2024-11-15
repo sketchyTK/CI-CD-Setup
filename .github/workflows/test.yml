@@ -22,8 +22,5 @@ jobs:
       - name: Install Deps
         run: npm run render-build
 
-      - name: Start Application
-        run: npm run start
-
       - name: Run Cypress Component test
         run: npm run test-component
