@@ -1,6 +1,8 @@
 name: Deploy To Render
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches:
       - main
@@ -12,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test
-        run: 
+        run: |
           npm install
           npm run start
           npm run test-component
