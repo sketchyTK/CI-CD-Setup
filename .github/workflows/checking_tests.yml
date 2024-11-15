@@ -22,8 +22,8 @@ jobs:
           node-version: 21.x
           
       # Install dependencies
-      - name: :toolbox: Install Deps
-        run: npm install
+      - name: :toolbox: Install Deps and 
+        run: npm render-build
 
       - name: Start Application
         run: npm run start
