@@ -1,0 +1,29 @@
+name: Checking Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Use Node.js 21.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 21.x
+          
+      - name: :toolbox: Install Deps and 
+        run: npm render-build
+
+      - name: Start Application
+        run: npm run start
+
+      - name: Run Cypress Component test
+        run: npm run test-component
