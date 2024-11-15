@@ -1,27 +1,24 @@
 name: Checking Tests
 
-# Trigger workflow on all pull requests
 on:
   pull_request:
     branches:
       - develop
-      
-# Jobs to carry out
+      - staging
+
 jobs:
   test:
-    # Operating system to run job on
     runs-on: ubuntu-latest
-    # Steps in job
+
     steps:
-      # Get code from repo
       - name: Checkout code
         uses: actions/checkout@v1
+
       - name: Use Node.js 21.x
         uses: actions/setup-node@v1
         with:
           node-version: 21.x
           
-      # Install dependencies
       - name: :toolbox: Install Deps and 
         run: npm render-build
 
