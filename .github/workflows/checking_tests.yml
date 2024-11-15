@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build:
+  test:
     name: Checking Tests
     runs-on: ubuntu-latest
     steps:
