@@ -5,6 +5,9 @@ on:
   pull_request:
     branches:
       - develop
+  pull_request_target:
+    branches:
+      - develop
 
 # Jobs to carry out
 jobs:
@@ -15,7 +18,7 @@ jobs:
     steps:
       # Get code from repo
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Use Node.js 21.x
         uses: actions/setup-node@v1
         with:
