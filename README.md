@@ -1,6 +1,6 @@
 # GitHub Actions CI/CD Setup
 
-<img src="../screenshots/action-workflows.png" alt="Screenshot of Candidate Search page" width="100%" height="auto">
+<img src="../main/screenshots/action-workflows.png" alt="Screenshot of Candidate Search page" width="100%" height="auto">
 
 ## Description
 
